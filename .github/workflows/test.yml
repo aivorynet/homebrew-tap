@@ -1,0 +1,27 @@
+name: test
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  brew:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, macos-15-intel, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Homebrew on Linux
+        if: runner.os == 'Linux'
+        run: echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
+      - run: brew install aivorynet/tap/aivory-code
+      - run: aivoryd --version
+      - run: test -x "$(brew --prefix)/bin/aivory"
+  script:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - run: curl -fsSL https://github.com/aivorynet/aivory-code/releases/latest/download/install.sh | sh
+      - run: ~/.local/bin/aivoryd --version
