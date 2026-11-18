@@ -4,24 +4,24 @@
 class AivoryCode < Formula
   desc "War room for coding agents: Claude Code, Codex CLI and Gemini CLI on one screen"
   homepage "https://github.com/aivorynet/aivory-code"
-  version "2026.2.1"
+  version "2026.2.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/aivorynet/aivory-code/releases/download/v2026.2.1/aivory-macos-arm64.tar.gz"
-      sha256 "1d850b36d2ee5907843bc8f5e15276601710987a162cdbd1388a58b1466f2c3f"
+      url "https://github.com/aivorynet/aivory-code/releases/download/v2026.2.2/aivory-macos-arm64.tar.gz"
+      sha256 "1b769d3a512de2a186570d8c3bcefe490141c9f62a8a7aab8f78e9200f49a7a3"
     end
     on_intel do
-      url "https://github.com/aivorynet/aivory-code/releases/download/v2026.2.1/aivory-macos-x64.tar.gz"
-      sha256 "63a3378e158497205ab188d55a7210008f055f149f71d23d3611fce93a34c8ea"
+      url "https://github.com/aivorynet/aivory-code/releases/download/v2026.2.2/aivory-macos-x64.tar.gz"
+      sha256 "7839ac0af099c15210d5f8623fa9dfad417ebe9985b76018208aeb897c75d86d"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/aivorynet/aivory-code/releases/download/v2026.2.1/aivory-linux-x64.tar.gz"
-      sha256 "e0fa1a0e0fbe73eefaf147477c9b173ba6862c9655e83e222dd2311c11a0ebe2"
+      url "https://github.com/aivorynet/aivory-code/releases/download/v2026.2.2/aivory-linux-x64.tar.gz"
+      sha256 "905ae872f9d8bdc0fda30d3189003cfcfe569b110571917f4303fb526cf37207"
     end
   end
 
